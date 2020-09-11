@@ -24,7 +24,6 @@ public class BasePage {
     
 
     public static void clickElement(By locator) {
-        //driver.findElement(By.xpath("//span[@id='ember683']")).click();
         getWebElement(locator).click();
     }
 

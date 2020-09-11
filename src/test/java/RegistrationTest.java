@@ -15,10 +15,7 @@ public class RegistrationTest extends BasePage{
     @Test
     public void test01_registration(){
 
-        // Assertion if element כניסה | השרמה is clickable
-        //System.out.println("Element כניסה | השרמה is Displayed: " + isDisplayedElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")));
         clickElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Click on כניסה | השרמה
-
         clickElement(By.xpath("//span[@class='text-btn' and @data-ember-action='1154']")); // Click on להרשמה
 
         sendKeysToElement(By.id("ember1179"), "מיכאל"); // Send name
