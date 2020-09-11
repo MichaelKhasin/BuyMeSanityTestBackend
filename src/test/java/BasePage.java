@@ -39,7 +39,7 @@ public class BasePage {
         getWebElement(locator).isDisplayed();
     }
 
-    public static WebElement getWebElement(By locator) {
+    private static WebElement getWebElement(By locator) {
         return DriverSingleton.getDriverInstance().findElement(locator);
     }
 }
