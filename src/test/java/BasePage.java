@@ -26,6 +26,10 @@ public class BasePage {
         driver.get(url);
     }
 
+    public static String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
     public static void clickElement(By locator) {
         getWebElement(locator).click();
     }

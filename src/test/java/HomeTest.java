@@ -32,9 +32,6 @@ public class HomeTest extends BasePage{
 
         clickElement(By.id("ember798")); // Click on "Find me a present"
 
-
-
-
     }
 
 
