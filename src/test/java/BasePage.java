@@ -20,9 +20,11 @@ public class BasePage {
     public BasePage(){
         this.driver = DriverSingleton.getDriverInstance();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.get("https://buyme.co.il/");
     }
-    
+
+    public static void getUrl(String url) {
+        driver.get(url);
+    }
 
     public static void clickElement(By locator) {
         getWebElement(locator).click();

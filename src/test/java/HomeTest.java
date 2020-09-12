@@ -14,18 +14,25 @@ import java.util.concurrent.TimeUnit;
 public class HomeTest extends BasePage{
     @BeforeClass
     public static void runOnceBeforeClass() {
-        // Login to BuyMe with existing user
-        clickElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Click on כניסה | השרמה
-        sendKeysToElement(By.id("ember1165"), Constants.MY_EMAIL); // Send email
-        sendKeysToElement(By.id("ember1167"), Constants.MY_PASSWORD);  // Send password
-        clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-כניסה ל
-
+        getUrl("https://buyme.co.il/");
+        Login.loginWithExistingUser();
     }
 
     @Test
     public void test01_homeScreen(){
         //clickElement(By.xpath("//div[@title id='ember738_chosen']")); // Click on sum
         clickElement(By.id("ember738_chosen")); // Click on sum
+        clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='4']")); // Pick the sum
+
+        clickElement(By.id("ember753_chosen")); // Click on region
+        clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='2']")); // Pick the region
+
+        clickElement(By.id("ember763_chosen")); // Click on category
+        clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='1']")); // Pick the category
+
+        clickElement(By.id("ember798")); // Click on "Find me a present"
+
+
 
 
     }

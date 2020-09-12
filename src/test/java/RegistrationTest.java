@@ -12,6 +12,11 @@ import java.util.concurrent.TimeUnit;
 
 public class RegistrationTest extends BasePage{
 
+    @BeforeClass
+    public static void runOnceBeforeClass() {
+        getUrl("https://buyme.co.il/");
+    }
+
     @Test
     public void test01_registration(){
 
