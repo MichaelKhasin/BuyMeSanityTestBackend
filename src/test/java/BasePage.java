@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     private static WebDriver driver;
@@ -37,6 +38,10 @@ public class BasePage {
 
     public static void isDisplayedElement (By locator) {
         getWebElement(locator).isDisplayed();
+    }
+
+    public static String getElementText (By locator) {
+        return getWebElement(locator).getText();
     }
 
     private static WebElement getWebElement(By locator) {

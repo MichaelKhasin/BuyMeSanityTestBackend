@@ -25,13 +25,18 @@ public class RegistrationTest extends BasePage{
 
         clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-הרשמה ל
 
-        // Registration error in case mail already exists - Assertion for element visibility:
-        waitVisibilityOfElementLocated(By.xpath("//div[@class='login-error']"));
+
     }
 
     @Test
     public void test02_assertRegistration() {
-        //Assert.assertEquals("מיכאל",getWebElement(By.id("ember1179")).getText());
+        // Registration error in case mail already exists - Assertion if "error message" element displayed:
+        isDisplayedElement(By.xpath("//div[@class='login-error']"));
+
+        isDisplayedElement(By.id("ember1179")); // Assertion if name element displayed
+        isDisplayedElement(By.id("ember1181")); // Assertion if email element displayed
+        isDisplayedElement(By.id("valPass")); // Assertion if password element displayed
+        isDisplayedElement(By.id("ember1185")); // Assertion if re-enter password element displayed
     }
 
 }
