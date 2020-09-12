@@ -19,9 +19,9 @@ public class RegistrationTest extends BasePage{
         clickElement(By.xpath("//span[@class='text-btn' and @data-ember-action='1154']")); // Click on להרשמה
 
         sendKeysToElement(By.id("ember1179"), "מיכאל"); // Send name
-        sendKeysToElement(By.id("ember1181"), "khasin13@gmail.com"); // Send email
-        sendKeysToElement(By.id("valPass"), "Abcd1efgh");  // Send password
-        sendKeysToElement(By.id("ember1185"), "Abcd1efgh");  // Re-enter password
+        sendKeysToElement(By.id("ember1181"), Constants.MY_EMAIL); // Send email
+        sendKeysToElement(By.id("valPass"), "Abcd1efgh");  // Send password (temporary)
+        sendKeysToElement(By.id("ember1185"), "Abcd1efgh");  // Re-enter password (temporary)
 
         clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-הרשמה ל
 
@@ -38,5 +38,4 @@ public class RegistrationTest extends BasePage{
         isDisplayedElement(By.id("valPass")); // Assertion if password element displayed
         isDisplayedElement(By.id("ember1185")); // Assertion if re-enter password element displayed
     }
-
 }
