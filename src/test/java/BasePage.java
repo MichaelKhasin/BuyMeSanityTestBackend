@@ -50,6 +50,10 @@ public class BasePage {
         return getWebElement(locator).getText();
     }
 
+    public static void quit () throws Exception {
+        driver.quit();
+    }
+
     private static WebElement getWebElement(By locator) throws Exception {
         return DriverSingleton.getDriverInstance().findElement(locator);
     }

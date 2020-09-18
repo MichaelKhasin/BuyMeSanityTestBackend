@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -47,5 +48,10 @@ public class RegistrationTest extends BasePage{
         isDisplayedElement(By.id("ember1181")); // Assertion if email element displayed
         isDisplayedElement(By.id("valPass")); // Assertion if password element displayed
         isDisplayedElement(By.id("ember1185")); // Assertion if re-enter password element displayed
+    }
+
+    @AfterClass
+    public static void afterClass() throws Exception {
+        quit();
     }
 }
