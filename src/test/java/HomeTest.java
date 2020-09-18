@@ -12,14 +12,17 @@ import java.util.concurrent.TimeUnit;
 
 
 public class HomeTest extends BasePage{
+    public HomeTest() throws Exception {
+    }
+
     @BeforeClass
-    public static void runOnceBeforeClass() {
-        getUrl("https://buyme.co.il/");
+    public static void runOnceBeforeClass() throws Exception {
+        getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
         Login.loginWithExistingUser();
     }
 
     @Test
-    public void test01_homeScreen(){
+    public void test01_homeScreen() throws Exception {
         //clickElement(By.xpath("//div[@title id='ember738_chosen']")); // Click on sum
         clickElement(By.id("ember738_chosen")); // Click on sum
         clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='4']")); // Pick the sum

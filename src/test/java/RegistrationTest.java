@@ -12,14 +12,19 @@ import java.util.concurrent.TimeUnit;
 
 public class RegistrationTest extends BasePage{
 
+    public RegistrationTest() throws Exception {
+    }
+
     @BeforeClass
-    public static void runOnceBeforeClass() {
-        getUrl("https://buyme.co.il/");
+    public static void runOnceBeforeClass() throws Exception {
+        getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
     }
 
     @Test
-    public void test01_registration(){
+    public void test01_registration() throws Exception {
 
+        //Thread.sleep(3000);
+        waitelementToBeClickable(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Wait until כניסה | השרמה is clickable
         clickElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Click on כניסה | השרמה
         clickElement(By.xpath("//span[@class='text-btn' and @data-ember-action='1154']")); // Click on להרשמה
 
@@ -34,7 +39,7 @@ public class RegistrationTest extends BasePage{
     }
 
     @Test
-    public void test02_assertRegistration() {
+    public void test02_assertRegistration() throws Exception {
         // Registration error in case mail already exists - Assertion if "error message" element displayed:
         isDisplayedElement(By.xpath("//div[@class='login-error']"));
 
