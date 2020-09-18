@@ -1,5 +1,6 @@
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -9,7 +10,7 @@ public class SenderReceiverInfoTest extends BasePage{
     }
 
     @BeforeClass
-    public static void runOnceBeforeClass() throws Exception {
+    public void runOnceBeforeClass() throws Exception {
        // https://buyme.co.il/money/1987736
         getUrl(GetXmlData.getData("SenderReceiverInfo")); // read from data.xml  https://buyme.co.il/money/1987736
     }
@@ -43,6 +44,11 @@ public class SenderReceiverInfoTest extends BasePage{
     public void test02_senderReceiverAssert() throws Exception {
         Assert.assertEquals("אל Dr. Johns", getElementText(By.xpath("//div[@class='receiver']"))); // Receiver Assert
         Assert.assertEquals("ממי המתנה? Michael", getElementText(By.xpath("//div[@class='sender']"))); // Sender Assert
+    }
+
+    @AfterClass
+    public void afterClass() throws Exception {
+        quit();
     }
 
 }

@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -16,7 +17,7 @@ public class HomeTest extends BasePage{
     }
 
     @BeforeClass
-    public static void runOnceBeforeClass() throws Exception {
+    public void runOnceBeforeClass() throws Exception {
         getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
         Login.loginWithExistingUser();
     }
@@ -35,6 +36,11 @@ public class HomeTest extends BasePage{
 
         clickElement(By.id("ember798")); // Click on "Find me a present"
 
+    }
+
+    @AfterClass
+    public void afterClass() throws Exception {
+        quit();
     }
 
 

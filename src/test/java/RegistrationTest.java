@@ -17,7 +17,7 @@ public class RegistrationTest extends BasePage{
     }
 
     @BeforeClass
-    public static void runOnceBeforeClass() throws Exception {
+    public void runOnceBeforeClass() throws Exception {
         getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
     }
 
@@ -51,7 +51,7 @@ public class RegistrationTest extends BasePage{
     }
 
     @AfterClass
-    public static void afterClass() throws Exception {
+    public void afterClass() throws Exception {
         quit();
     }
 }
