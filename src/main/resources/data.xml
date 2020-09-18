@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <browserType>Chrome</browserType>
+    <UrlRegistration>https://buyme.co.il</UrlRegistration>
+    <UrlPickBusiness>https://buyme.co.il/search?budget=4&amp;category=204&amp;region=11</UrlPickBusiness>
+</config>
