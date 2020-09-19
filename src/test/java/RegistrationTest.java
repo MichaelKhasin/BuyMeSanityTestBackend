@@ -24,7 +24,7 @@ public class RegistrationTest extends BasePage{
     @Test
     public void test01_registration() throws Exception {
 
-        //Thread.sleep(3000);
+        Thread.sleep(2000); // Adding sleep thread for human eye comfortability
         waitelementToBeClickable(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Wait until כניסה | השרמה is clickable
         clickElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Click on כניסה | השרמה
         clickElement(By.xpath("//span[@class='text-btn' and @data-ember-action='1154']")); // Click on להרשמה
@@ -36,6 +36,7 @@ public class RegistrationTest extends BasePage{
 
         clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-הרשמה ל
 
+        Thread.sleep(2000); // Adding sleep thread for human eye comfortability
 
     }
 
@@ -48,6 +49,7 @@ public class RegistrationTest extends BasePage{
         isDisplayedElement(By.id("ember1181")); // Assertion if email element displayed
         isDisplayedElement(By.id("valPass")); // Assertion if password element displayed
         isDisplayedElement(By.id("ember1185")); // Assertion if re-enter password element displayed
+
     }
 
     @AfterClass
