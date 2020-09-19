@@ -1,5 +1,12 @@
 import org.openqa.selenium.By;
 
+/**
+ * This class contains login to the https://buyme.co.il site.
+ * Most stable locators are identified by Selenium.
+ * Created as separate class.
+ * Class extends BasePage, which contains a bunch of popular methods, so they are reused.
+ */
+
 public class Login extends BasePage {
     public Login() throws Exception {
     }

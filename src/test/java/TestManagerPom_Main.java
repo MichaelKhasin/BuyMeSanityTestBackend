@@ -1,5 +1,19 @@
 import org.testng.annotations.Test;
 
+/**
+ * BuyMe Test Sanity.
+ * Software that testing site https://buyme.co.il
+ * Contains of 4 steps: Registration, Home (pick price, region and category),
+ * pick business and finally filling sending and received info.
+ * This specific class is the Main POM class, kind of "test Manager,
+ * which instantiating the tests and their order.
+ * Webderiver instance instantiated by Singleton design pattern.
+ * BasePage class is used & contains a bunch of popular methods, so they are reused.
+ * Tests are divided into Registration separate test and Home / pick business / sender and receiver info.
+ * Constants class contains repeatable variables.
+ * Extent report is used to reflect each test status.
+ */
+
 public class TestManagerPom_Main {
 
     @Test

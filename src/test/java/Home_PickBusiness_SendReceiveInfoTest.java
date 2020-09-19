@@ -3,6 +3,14 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ * This class contains Home (pick price, region and category),
+ * pick business and filling sender and receiver info.
+ * Most stable locators are identified by Selenium.
+ * Elements assertion is took place.
+ * Class extends BasePage, which contains a bunch of popular methods, so they are reused.
+ */
+
 public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
     public Home_PickBusiness_SendReceiveInfoTest() throws Exception {
     }

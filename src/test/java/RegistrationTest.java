@@ -1,24 +1,50 @@
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+/**
+ * This class contains Registration test.
+ * Most stable locators are identified by Selenium.
+ * Elements assertion is took place.
+ * Class extends BasePage, which contains a bunch of popular methods, so they are reused.
+ */
 
 public class RegistrationTest extends BasePage{
+    // create ExtentReports and attach reporter(s)
+    public static ExtentReports extent;
+    // creates a toggle for the given test, adds all log events under it
+    public static ExtentTest test;
 
     public RegistrationTest() throws Exception {
     }
 
     @BeforeClass
     public void runOnceBeforeClass() throws Exception {
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Noam\\Downloads\\extent.html");
+        // attach reporter
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+        // name your test and add description
+        test = extent.createTest("BuyMeSanityTest", "Sample description");
+        // add custom system info
+        extent.setSystemInfo("Environment", "IntellyJ Idea");
+        extent.setSystemInfo("Development & QA", "Michael");
+        test.log(Status.INFO, "Report start");
+
+
         getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
+        if(getTitle(GetXmlData.getData("UrlRegistration")).equals("BUYME אתר המתנות והחוויות הגדול בישראל"))
+        {
+            test.log(Status.PASS, "Navigated to the specified URL");
+        }
+        else {
+            test.log(Status.FAIL, "Test Failed");
+        }
     }
 
     @Test
@@ -54,6 +80,6 @@ public class RegistrationTest extends BasePage{
 
     @AfterClass
     public void afterClass() throws Exception {
-        quit();
+        extent.flush();
     }
 }

@@ -3,6 +3,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
+/**
+ * Website URL and browser type are stored inside an external data.XML file.
+ */
+
 public class GetXmlData {
 
     public static String getData (String keyName) throws Exception{

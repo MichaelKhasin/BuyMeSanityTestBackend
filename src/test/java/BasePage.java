@@ -1,8 +1,4 @@
-/**
- * Base Page
- * class which contains a bunch of methods, so they can be reused in every page.
- */
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-public class BasePage {
+/**
+ * BasePage class is used & contains a bunch of popular methods, so they are reused.
+ * RegistrationTest and Home_PickBusiness_SendReceiveInfoTest classes are extend the BasePage.
+ */
+
+public class BasePage extends Report{
     private static WebDriver driver;
     private static WebDriverWait wait;
 
@@ -22,8 +23,12 @@ public class BasePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public static void getUrl(String url) {
+    public static void getUrl(String url) throws Exception{
         driver.get(url);
+    }
+
+    public static String getTitle(String url) throws Exception{
+        return driver.getTitle();
     }
 
     public static String getCurrentUrl() {
