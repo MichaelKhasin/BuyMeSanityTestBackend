@@ -1,5 +1,6 @@
 import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -58,6 +59,19 @@ public class BasePage extends Report{
     public static void quit () throws Exception {
         driver.quit();
     }
+
+    public static int getElementHeight (By locator) throws Exception {
+        return getWebElement(locator).getRect().getHeight();
+    }
+
+    public static int getElementWidth (By locator) throws Exception {
+        return getWebElement(locator).getRect().getWidth();
+    }
+
+    public static void stopPageLoading () throws Exception {
+        ((JavascriptExecutor)driver).executeScript("window.stop()");
+    }
+
 
     private static WebElement getWebElement(By locator) throws Exception {
         return DriverSingleton.getDriverInstance().findElement(locator);
