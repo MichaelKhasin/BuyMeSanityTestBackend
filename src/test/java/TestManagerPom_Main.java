@@ -22,6 +22,7 @@ public class TestManagerPom_Main {
         registrationTest.runOnceBeforeClass();
         registrationTest.test01_registration();
         registrationTest.test02_assertRegistration();
+        registrationTest.afterClass();
     }
 
     @Test
@@ -31,6 +32,7 @@ public class TestManagerPom_Main {
         home_PickBusiness_SendReceiveInfoTest.test01_homeScreen();
         home_PickBusiness_SendReceiveInfoTest.test02_pickBusiness();
         home_PickBusiness_SendReceiveInfoTest.test03_SenderReceiverInfo();
+        home_PickBusiness_SendReceiveInfoTest.afterClass();
     }
 
 
