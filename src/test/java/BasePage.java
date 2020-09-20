@@ -1,20 +1,18 @@
-import com.aventstack.extentreports.Status;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 /**
  * BasePage class is used & contains a bunch of popular methods, so they are reused.
  * RegistrationTest and Home_PickBusiness_SendReceiveInfoTest classes are extend the BasePage.
  */
 
-public class BasePage extends Report{
+public class BasePage {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
@@ -72,8 +70,26 @@ public class BasePage extends Report{
         ((JavascriptExecutor)driver).executeScript("window.stop()");
     }
 
+    public static String getElementColor (By locator) throws Exception {
+        return getWebElement(locator).getCssValue("color");
+    }
+
 
     private static WebElement getWebElement(By locator) throws Exception {
         return DriverSingleton.getDriverInstance().findElement(locator);
+    }
+
+
+
+    public static String takeScreenShot(String ImagesPath) {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        File screenShotFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        File destinationFile = new File(ImagesPath+".png");
+        try {
+            FileUtils.copyFile(screenShotFile, destinationFile);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return ImagesPath+".png";
     }
 }
