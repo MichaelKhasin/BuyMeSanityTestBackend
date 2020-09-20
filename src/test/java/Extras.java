@@ -18,6 +18,7 @@ public class Extras extends BasePage{
 
     }
 
+    // Login without credentials ans assert error messages
     @Test
     public void test01_assertErrorMessages() throws Exception {
         getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
@@ -38,6 +39,7 @@ public class Extras extends BasePage{
 //        System.out.println(getElementWidth(By.xpath("//*[@id=\"app-loading-img\"]/div/div[3]")));
     }
 
+    // Print the color of למי לשלוח
     @Test
     public void test03_elementColor() throws Exception {
         getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
@@ -60,7 +62,7 @@ public class Extras extends BasePage{
         sendKeysToElement(By.id("ember1484"), "400"); // Send 400 nis to price amount
         clickElement(By.xpath("//button[@class='btn btn-theme' and @data-ember-action='1485']")); // Click on לבחירה
 
-        System.out.println(getElementColor(By.xpath("//div[@class='step-title highlighted']")));
+        System.out.println(getElementColor(By.xpath("//div[@class='step-title highlighted']"))); // Print the color of למי לשלוח
 
     }
 
