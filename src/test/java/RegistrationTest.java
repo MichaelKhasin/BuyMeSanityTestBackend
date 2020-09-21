@@ -67,12 +67,12 @@ public class RegistrationTest extends BasePage{
 
         Thread.sleep(2000); // Adding sleep thread for human eye comfortability
 
-        waitelementToBeClickable(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Wait until כניסה | השרמה is clickable
+        waitelementToBeClickable(By.xpath("//span[contains(text(), 'הרשמה')]")); // Wait until כניסה | השרמה is clickable
 
-        //clickElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Click on כניסה | השרמה
+        //clickElement(By.xpath("//span[contains(text(), 'הרשמה')]")); // Click on כניסה | השרמה
         clickElement = false;
         try {
-            clickElement(By.xpath("//li[@class='solid' and @data-ember-action='697']")); // Click on כניסה | השרמה
+            clickElement(By.xpath("//span[contains(text(), 'הרשמה')]")); // Click on כניסה | השרמה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -89,10 +89,10 @@ public class RegistrationTest extends BasePage{
         }
 
 
-        //clickElement(By.xpath("//span[@class='text-btn' and @data-ember-action='1154']")); // Click on להרשמה
+        //clickElement(By.xpath("//span[@class='text-btn']")); // Click on להרשמה
         clickElement = false;
         try {
-            clickElement(By.xpath("//span[@class='text-btn' and @data-ember-action='1154']")); // Click on להרשמה
+            clickElement(By.xpath("//span[@class='text-btn']")); // Click on להרשמה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -108,10 +108,10 @@ public class RegistrationTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.id("ember1179"), "מיכאל"); // Send name
+        //sendKeysToElement(By.//input[@placeholder='שם פרטי']"), "מיכאל"); // Send name
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("ember1179"), "מיכאל"); // Send name
+            sendKeysToElement(By.xpath("//input[@placeholder='שם פרטי']"), "מיכאל"); // Send name
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -127,10 +127,10 @@ public class RegistrationTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.id("ember1181"), Constants.MY_EMAIL); // Send email
+        //sendKeysToElement(By.xpath("//input[@placeholder='מייל']"), Constants.MY_EMAIL); // Send email
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("ember1181"), Constants.MY_EMAIL); // Send email
+            sendKeysToElement(By.xpath("//input[@placeholder='מייל']"), Constants.MY_EMAIL); // Send email
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -146,10 +146,10 @@ public class RegistrationTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.id("valPass"), "Abcd1efgh");  // Send password (temporary)
+        //sendKeysToElement(By.xpath("//input[@placeholder='סיסמה']"), "Abcd1efgh");  // Send password (temporary)
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("valPass"), "Abcd1efgh");  // Send password (temporary)
+            sendKeysToElement(By.xpath("//input[@placeholder='סיסמה']"), "Abcd1efgh");  // Send password (temporary)
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -165,10 +165,10 @@ public class RegistrationTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.id("ember1185"), "Abcd1efgh");  // Re-enter password (temporary)
+        //sendKeysToElement(By.xpath("//input[@placeholder='אימות סיסמה']"), "Abcd1efgh");  // Re-enter password (temporary)
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("ember1185"), "Abcd1efgh");  // Re-enter password (temporary)
+            sendKeysToElement(By.xpath("//input[@placeholder='אימות סיסמה']"), "Abcd1efgh");  // Re-enter password (temporary)
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("details", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -212,10 +212,10 @@ public class RegistrationTest extends BasePage{
         // Registration error in case mail already exists - Assertion if "error message" element displayed:
         isDisplayedElement(By.xpath("//div[@class='login-error']"));
 
-        isDisplayedElement(By.id("ember1179")); // Assertion if name element displayed
-        isDisplayedElement(By.id("ember1181")); // Assertion if email element displayed
-        isDisplayedElement(By.id("valPass")); // Assertion if password element displayed
-        isDisplayedElement(By.id("ember1185")); // Assertion if re-enter password element displayed
+        isDisplayedElement(By.xpath("//input[@placeholder='שם פרטי']")); // Assertion if name element displayed
+        isDisplayedElement(By.xpath("//input[@placeholder='מייל']")); // Assertion if email element displayed
+        isDisplayedElement(By.xpath("//input[@placeholder='סיסמה']")); // Assertion if password element displayed
+        isDisplayedElement(By.xpath("//input[@placeholder='אימות סיסמה']")); // Assertion if re-enter password element displayed
 
     }
 

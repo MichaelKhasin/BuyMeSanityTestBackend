@@ -68,10 +68,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
     @Test
     public void test01_homeScreen() throws Exception {
-        // clickElement(By.id("ember738_chosen")); // Click on sum
+        // clickElement(By.id("ember776_chosen")); // Click on sum
         clickElement = false;
         try {
-            clickElement(By.id("ember738_chosen")); // Click on sum
+            clickElement(By.id("ember776_chosen")); // Click on sum
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -107,10 +107,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //clickElement(By.id("ember753_chosen")); // Click on region
+        //clickElement(By.id("ember791_chosen")); // Click on region
         clickElement = false;
         try {
-            clickElement(By.id("ember753_chosen")); // Click on region
+            clickElement(By.id("ember791_chosen")); // Click on region
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -145,10 +145,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //clickElement(By.id("ember763_chosen")); // Click on category
+        //clickElement(By.id("ember801_chosen")); // Click on category
         clickElement = false;
         try {
-            clickElement(By.id("ember763_chosen")); // Click on category
+            clickElement(By.id("ember801_chosen")); // Click on category
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -183,10 +183,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //clickElement(By.id("ember798")); // Click on "Find me a present"
+        //clickElement(By.xpath("//a[@rel='nofollow' and @class='ui-btn search ember-view']")); // Click on "Find me a present"
         clickElement = false;
         try {
-            clickElement(By.id("ember798")); // Click on "Find me a present"
+            clickElement(By.xpath("//a[@rel='nofollow' and @class='ui-btn search ember-view']")); // Click on "Find me a present"
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -212,12 +212,12 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         // Assert url https://buyme.co.il/search?budget=4&category=204&region=11
         Assert.assertEquals(GetXmlData.getData("UrlPickBusiness"),getCurrentUrl());
 
-        waitelementToBeClickable(By.id("ember1387")); // Wait until מתנות וגאדג'טים is clickable
+        waitelementToBeClickable(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Wait until מתנות וגאדג'טים is clickable
 
-        //clickElement(By.id("ember1387")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
+        //clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
         clickElement = false;
         try {
-            clickElement(By.id("ember1387")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
+            clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -233,10 +233,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.id("ember1484"), "400"); // Send 400 nis to price amount
+        //sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), "400"); // Send 400 nis to price amount
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("ember1484"), "400"); // Send 400 nis to price amount
+            sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), "400"); // Send 400 nis to price amount
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -255,7 +255,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         //clickElement(By.xpath("//button[@class='btn btn-theme' and @data-ember-action='1485']")); // Click on לבחירה
         clickElement = false;
         try {
-            clickElement(By.xpath("//button[@class='btn btn-theme' and @data-ember-action='1485']")); // Click on לבחירה
+            clickElement(By.xpath("//button[@class='btn btn-theme' and contains(text(), 'לבחירה')]")); // Click on לבחירה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -278,10 +278,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
     @Test
     public void test03_SenderReceiverInfo() throws Exception {
 
-        // clickElement(By.xpath("//label[@class='option selected' and @data-ember-action='1597']")); // Click on למישהו אחר
+        // clickElement(By.xpath("//span[@class='text' and contains(text(), 'למישהו אחר')]")); // Click on למישהו אחר
         clickElement = false;
         try {
-            clickElement(By.xpath("//label[@class='option selected' and @data-ember-action='1597']")); // Click on למישהו אחר
+            clickElement(By.xpath("//span[@class='text' and contains(text(), 'למישהו אחר')]")); // Click on למישהו אחר
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -298,10 +298,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         }
 
 
-        //sendKeysToElement(By.id("ember1601"), "Dr. Johns"); // Enter receiver name
+        //sendKeysToElement(By.xpath("//input[@type='text' and @data-parsley-required-message='מי הזוכה המאושר? יש להשלים את שם המקבל/ת']"), "Dr. Johns"); // Enter receiver name
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("ember1601"), "Dr. Johns"); // Enter receiver name
+            sendKeysToElement(By.xpath("//input[@type='text' and @data-parsley-required-message='מי הזוכה המאושר? יש להשלים את שם המקבל/ת']"), "Dr. Johns"); // Enter receiver name
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -319,10 +319,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
         //sendKeysToElement(By.id("ember1603"), "Michael"); // Enter sender name
 
-        //clickElement(By.id("ember1605_chosen")); // Click on event
+        //clickElement(By.xpath("//span[contains(text(), 'לאיזה אירוע?')]")); // Click on event
         clickElement = false;
         try {
-            clickElement(By.id("ember1605_chosen")); // Click on event
+            clickElement(By.xpath("//span[contains(text(), 'לאיזה אירוע?')]")); // Click on event
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -376,10 +376,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.id("ember1634"), "C:\\Users\\Noam\\Downloads\\ShanaTova.PNG"); // Upload picture
+        //sendKeysToElement(By.xpath("//input[@accept='image/*' and @name='fileUpload']"), "C:\\Users\\Noam\\Downloads\\ShanaTova.PNG"); // Upload picture
         sendKeys = false;
         try {
-            sendKeysToElement(By.id("ember1634"), "C:\\Users\\Noam\\Downloads\\ShanaTova.PNG"); // Upload picture
+            sendKeysToElement(By.xpath("//input[@accept='image/*' and @name='fileUpload']"), "C:\\Users\\Noam\\Downloads\\ShanaTova.PNG"); // Upload picture
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -396,10 +396,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         }
 
 
-        //clickElement(By.xpath("//label[@class='send-now' and @data-ember-action='1647']")); // Click on מיד אחרי התשלום
+        //clickElement(By.xpath("//label[@class='send-now' and contains(text(), 'מיד אחרי התשלום')]")); // Click on מיד אחרי התשלום
         clickElement = false;
         try {
-            clickElement(By.xpath("//label[@class='send-now' and @data-ember-action='1647']")); // Click on מיד אחרי התשלום
+            clickElement(By.xpath("//label[@class='send-now' and contains(text(), 'מיד אחרי התשלום')]")); // Click on מיד אחרי התשלום
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -416,10 +416,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         }
 
 
-        //clickElement(By.xpath("//button[@class='btn btn-clean btn-send-option fluid ' and @data-ember-action='1549']")); // Click on Mail
+        //clickElement(By.xpath("//span[@class='btn-text' and contains(text(), 'במייל')]")); // Click on Mail
         clickElement = false;
         try {
-            clickElement(By.xpath("//button[@class='btn btn-clean btn-send-option fluid ' and @data-ember-action='1549']")); // Click on Mail
+            clickElement(By.xpath("//span[@class='btn-text' and contains(text(), 'במייל')]")); // Click on Mail
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
@@ -435,10 +435,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.xpath("//input[@data-parsley-type='email' and @class='form-control input-theme input-mail ember-view ember-text-field']"), Constants.MY_EMAIL); // Enter mail address
+        //sendKeysToElement(By.xpath("//input[@data-parsley-type='email' and @placeholder='כתובת המייל של מקבל/ת המתנה']"), Constants.MY_EMAIL); // Enter mail address
         sendKeys = false;
         try {
-            //sendKeysToElement(By.id("ember2076"), Constants.MY_EMAIL); // Enter mail address
+            //sendKeysToElement(By.xpath("//input[@data-parsley-type='email' and @placeholder='כתובת המייל של מקבל/ת המתנה']"), Constants.MY_EMAIL); // Enter mail address
             sendKeysToElement(By.xpath("//input[@data-parsley-type='email' and @class='form-control input-theme input-mail ember-view ember-text-field']"), Constants.MY_EMAIL); // Enter mail address
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
@@ -455,11 +455,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //clickElement(By.xpath("//button[@class='btn btn-theme btn-save']")) // Click on שמירה
+        //clickElement(By.xpath("//button[@class='btn btn-theme btn-save' and contains(text(), 'שמירה')]")) // Click on שמירה
         clickElement = false;
         try {
-            //clickElement(By.xpath("//button[@class='btn btn-theme btn-save' and @data-ember-action='2078']")); // Click on שמירה
-            clickElement(By.xpath("//button[@class='btn btn-theme btn-save']")); // Click on שמירה
+            clickElement(By.xpath("//button[@class='btn btn-theme btn-save' and contains(text(), 'שמירה')]")); // Click on שמירה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
