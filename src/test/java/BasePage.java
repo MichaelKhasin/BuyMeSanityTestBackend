@@ -1,5 +1,6 @@
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -24,6 +25,10 @@ public class BasePage {
 
     public static void getUrl(String url) throws Exception{
         driver.get(url);
+    }
+
+    public static void reloadUrl() throws Exception{
+        driver.navigate().refresh();
     }
 
     public static String getTitle(String url) throws Exception{
@@ -66,8 +71,10 @@ public class BasePage {
         return getWebElement(locator).getRect().getWidth();
     }
 
-    public static void stopPageLoading () throws Exception {
-        ((JavascriptExecutor)driver).executeScript("window.stop()");
+    public static void actionPerform (String text) throws Exception {
+        Actions myAction = new Actions(driver);
+        myAction.sendKeys(text);
+        myAction.perform();
     }
 
     public static String getElementColor (By locator) throws Exception {
