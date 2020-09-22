@@ -219,6 +219,7 @@ public class RegistrationTest extends BasePage{
 
     }
 
+    // Extent Report flush
     @AfterClass
     public void afterClass() throws Exception {
         extent.flush();

@@ -1,7 +1,13 @@
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -10,11 +16,27 @@ import org.testng.annotations.Test;
  */
 
 public class Extras extends BasePage{
+    // create ExtentReports and attach reporter(s)
+    public static ExtentReports extent;
+    // creates a toggle for the given test, adds all log events under it
+    public static ExtentTest test;
+    boolean scroll = false;
+
     public Extras() throws Exception {
     }
 
     @BeforeClass
     public void runOnceBeforeClass() throws Exception {
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Noam\\Downloads\\Extent_Extras.html");
+        // attach reporter
+        extent = new ExtentReports();
+        extent.attachReporter(htmlReporter);
+        // name your test and add description
+        test = extent.createTest("Extent Report for RegistrationTest", "Sample description");
+        // add custom system info
+        extent.setSystemInfo("Environment", "IntellyJ Idea");
+        extent.setSystemInfo("Development & QA", "Michael");
+        test.log(Status.INFO, "Report start");
 
     }
 
@@ -42,7 +64,7 @@ public class Extras extends BasePage{
 //        System.out.println(getElementWidth(By.xpath("//*[@id=\"app-loading-img\"]/div/div[3]")));
     }
 
-    // Print the color of למי לשלוח
+    // Print the color of למי לשלוח , Scroll to the bottom, printscreen and add to Report
     @Test
     public void test03_elementColor() throws Exception {
         getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
@@ -67,9 +89,31 @@ public class Extras extends BasePage{
 
         System.out.println(getElementColor(By.xpath("//div[@class='step-title highlighted']"))); // Print the color of למי לשלוח
 
+
+        scroll = false;
+        try {
+            scrolltoElement(By.xpath("//input[@placeholder='המייל שלך']"));
+            scroll = true;
+            String timeNow = String.valueOf(System.currentTimeMillis());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            test.log(Status.FAIL, "Scroll is not successful" + e.getMessage());
+            scroll = false;
+
+        } finally {
+            if (scroll) {
+                test.log(Status.PASS, "Scroll is successful");
+            }
+        }
     }
 
-
+    // Extent Report flush
+    @AfterClass
+    public void afterClass() throws Exception {
+        extent.flush();
+    }
 
 
 }

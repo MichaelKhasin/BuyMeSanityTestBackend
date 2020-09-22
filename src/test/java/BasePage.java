@@ -81,6 +81,11 @@ public class BasePage {
         return getWebElement(locator).getCssValue("color");
     }
 
+    public static void scrolltoElement (By locator) throws Exception {
+        Thread.sleep(2000);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getWebElement(locator));
+    }
+
 
     private static WebElement getWebElement(By locator) throws Exception {
         return DriverSingleton.getDriverInstance().findElement(locator);

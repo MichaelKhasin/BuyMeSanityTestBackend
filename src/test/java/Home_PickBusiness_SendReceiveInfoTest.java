@@ -478,6 +478,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         Assert.assertEquals("ממי המתנה? Michael Khasin", getElementText(By.xpath("//div[@class='sender']"))); // Sender Assert
     }
 
+    // Extent Report flush
     @AfterClass
     public void afterClass() throws Exception {
         extent.flush();
