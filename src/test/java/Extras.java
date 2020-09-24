@@ -54,7 +54,8 @@ public class Extras extends BasePage{
 
     @Test
     public void test02_dotsHeightWidth() throws Exception {
-//        getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
+        getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
+        stopLoadingPage();
 //        reloadUrl();
 //        actionPerform("Keys.ESCAPE");
         //sendKeysToElement(By.xpath("/html/body"), "Keys.ESCAPE"); // ESCAPE to pause page loading

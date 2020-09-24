@@ -86,6 +86,10 @@ public class BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getWebElement(locator));
     }
 
+    public static void stopLoadingPage () throws Exception {
+        ((JavascriptExecutor) driver).executeScript("window.stop;");
+    }
+
 
     private static WebElement getWebElement(By locator) throws Exception {
         return DriverSingleton.getDriverInstance().findElement(locator);
