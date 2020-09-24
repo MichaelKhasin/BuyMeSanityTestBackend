@@ -49,7 +49,7 @@ public class Extras extends BasePage{
         clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-כניסה ל
 
         Assert.assertEquals("כל המתנות מחכות לך! אבל קודם צריך מייל וסיסמה", getElementText(By.id("parsley-id-12"))); // Email Assert
-        Assert.assertEquals("כל המתנות מחכות לך! אבל קודם צריך מייל וסיסמה", getElementText(By.id("parsley-id-14"))); // Email Assert
+        Assert.assertEquals("כל המתנות מחכות לך! אבל קודם צריך מייל וסיסמה", getElementText(By.id("parsley-id-14"))); // Password Assert
     }
 
 
