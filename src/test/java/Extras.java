@@ -32,7 +32,7 @@ public class Extras extends BasePage{
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         // name your test and add description
-        test = extent.createTest("Extent Report for RegistrationTest", "Sample description");
+        test = extent.createTest("Extent Report for Extras", "Sample description");
         // add custom system info
         extent.setSystemInfo("Environment", "IntellyJ Idea");
         extent.setSystemInfo("Development & QA", "Michael");
@@ -52,18 +52,6 @@ public class Extras extends BasePage{
         Assert.assertEquals("כל המתנות מחכות לך! אבל קודם צריך מייל וסיסמה", getElementText(By.id("parsley-id-14"))); // Email Assert
     }
 
-    @Test
-    public void test02_dotsHeightWidth() throws Exception {
-        getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
-        stopLoadingPage();
-//        reloadUrl();
-//        actionPerform("Keys.ESCAPE");
-        //sendKeysToElement(By.xpath("/html/body"), "Keys.ESCAPE"); // ESCAPE to pause page loading
-
-//        waitelementToBeClickable(By.xpath("//*[@id=\"app-loading-img\"]/div/div[3]")); // Wait until yellow bounce is clickable
-//        System.out.println(getElementHeight(By.xpath("//*[@id=\"app-loading-img\"]/div/div[3]")));
-//        System.out.println(getElementWidth(By.xpath("//*[@id=\"app-loading-img\"]/div/div[3]")));
-    }
 
     // Print the color of למי לשלוח , Scroll to the bottom, printscreen and add to Report
     @Test
