@@ -29,7 +29,7 @@ public class RegistrationTest extends BasePage{
 
     @BeforeClass
     public void runOnceBeforeClass() throws Exception {
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Noam\\Downloads\\Extent_RegistrationTest.html");
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Misha\\Downloads\\Extent_RegistrationTest.html");
         // attach reporter
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
@@ -47,7 +47,7 @@ public class RegistrationTest extends BasePage{
             getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
             pageOpened = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -75,7 +75,7 @@ public class RegistrationTest extends BasePage{
             clickElement(By.xpath("//span[contains(text(), 'הרשמה')]")); // Click on כניסה | השרמה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -95,7 +95,7 @@ public class RegistrationTest extends BasePage{
             clickElement(By.xpath("//span[@class='text-btn']")); // Click on להרשמה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -114,7 +114,7 @@ public class RegistrationTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@placeholder='שם פרטי']"), "מיכאל"); // Send name
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -133,7 +133,7 @@ public class RegistrationTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@placeholder='מייל']"), Constants.MY_EMAIL); // Send email
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -152,7 +152,7 @@ public class RegistrationTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@placeholder='סיסמה']"), "Abcd1efgh");  // Send password (temporary)
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -171,7 +171,7 @@ public class RegistrationTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@placeholder='אימות סיסמה']"), "Abcd1efgh");  // Re-enter password (temporary)
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -190,7 +190,7 @@ public class RegistrationTest extends BasePage{
             clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-הרשמה ל
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();

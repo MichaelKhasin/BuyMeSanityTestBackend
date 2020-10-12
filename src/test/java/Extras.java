@@ -27,7 +27,7 @@ public class Extras extends BasePage{
 
     @BeforeClass
     public void runOnceBeforeClass() throws Exception {
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Noam\\Downloads\\Extent_Extras.html");
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Misha\\Downloads\\Extent_Extras.html");
         // attach reporter
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
@@ -84,7 +84,7 @@ public class Extras extends BasePage{
             scrolltoElement(By.xpath("//input[@placeholder='המייל שלך']"));
             scroll = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();

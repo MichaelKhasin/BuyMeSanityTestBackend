@@ -31,7 +31,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
     @BeforeClass
     public void runOnceBeforeClass() throws Exception {
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Noam\\Downloads\\Extent_Home_PickBusiness_SendReceiveInfoTest.html");
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C:\\Users\\Misha\\Downloads\\Extent_Home_PickBusiness_SendReceiveInfoTest.html");
         // attach reporter
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
@@ -49,7 +49,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             getUrl(GetXmlData.getData("UrlRegistration")); // read from data.xml  https://buyme.co.il
             pageOpened = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,7 +74,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.id("ember776_chosen")); // Click on sum
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,7 +94,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='4']")); // Pick the sum 300-499
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -113,7 +113,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.id("ember791_chosen")); // Click on region
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -132,7 +132,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='2']")); // Pick the region merkaz
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -151,7 +151,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.id("ember801_chosen")); // Click on category
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -170,7 +170,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='1']")); // Pick the category מתנות עד הבית
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -189,7 +189,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//a[@rel='nofollow' and @class='ui-btn search ember-view']")); // Click on "Find me a present"
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -220,7 +220,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -239,7 +239,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), "400"); // Send 400 nis to price amount
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -258,7 +258,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//button[@class='btn btn-theme' and contains(text(), 'לבחירה')]")); // Click on לבחירה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -284,7 +284,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//span[@class='text' and contains(text(), 'למישהו אחר')]")); // Click on למישהו אחר
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -304,7 +304,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@type='text' and @data-parsley-required-message='מי הזוכה המאושר? יש להשלים את שם המקבל/ת']"), "Dr. Johns"); // Enter receiver name
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -325,7 +325,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//span[contains(text(), 'לאיזה אירוע?')]")); // Click on event
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -344,7 +344,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='1']")); // Pick an event
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -363,7 +363,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             sendKeysToElement(By.xpath("//textarea[@rows='4' and @data-parsley-group='main']"), "שנה טובה ובלי קורונה !"); // Enter blessing
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -376,13 +376,13 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //sendKeysToElement(By.xpath("//input[@accept='image/*' and @name='fileUpload']"), "C:\\Users\\Noam\\Downloads\\ShanaTova.PNG"); // Upload picture
+        //sendKeysToElement(By.xpath("//input[@accept='image/*' and @name='fileUpload']"), "C:\\Users\\Misha\\Downloads\\ShanaTova.PNG"); // Upload picture
         sendKeys = false;
         try {
-            sendKeysToElement(By.xpath("//input[@accept='image/*' and @name='fileUpload']"), "C:\\Users\\Noam\\Downloads\\ShanaTova.PNG"); // Upload picture
+            sendKeysToElement(By.xpath("//input[@accept='image/*' and @name='fileUpload']"), "C:\\Users\\Misha\\Downloads\\ShanaTova.PNG"); // Upload picture
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -402,7 +402,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//label[@class='send-now' and contains(text(), 'מיד אחרי התשלום')]")); // Click on מיד אחרי התשלום
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -422,7 +422,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//span[@class='btn-text' and contains(text(), 'במייל')]")); // Click on Mail
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -442,7 +442,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             sendKeysToElement(By.xpath("//input[@data-parsley-type='email' and @class='form-control input-theme input-mail ember-view ember-text-field']"), Constants.MY_EMAIL); // Enter mail address
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -461,7 +461,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             clickElement(By.xpath("//button[@class='btn btn-theme btn-save' and contains(text(), 'שמירה')]")); // Click on שמירה
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
-            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Noam\\Downloads\\" + timeNow)).build());
+            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
