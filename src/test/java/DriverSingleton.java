@@ -14,6 +14,7 @@ public class DriverSingleton {
 
             if (driver == null) {
                 String type = GetXmlData.getData("browserType");
+                //String type = DBActions.selectBrowser();
                 if (type.equals("Chrome")) {
                     System.setProperty("webdriver.chrome.driver", "e:\\QA_Automation_Java\\chromedriver_win32\\chromedriver.exe");
                     ChromeOptions options = new ChromeOptions();

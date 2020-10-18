@@ -108,4 +108,6 @@ public class BasePage {
         }
         return ImagesPath+".png";
     }
+
+
 }
