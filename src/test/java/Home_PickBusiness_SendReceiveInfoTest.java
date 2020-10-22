@@ -68,10 +68,11 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
     @Test
     public void test01_homeScreen() throws Exception {
-        // clickElement(By.id("ember776_chosen")); // Click on sum
+        // Click on sum
+        // clickElement(By.xpath("//div[@class='chosen-container chosen-container-single form-control dib search-chosen ember-view ember-chosenselect form-control chosen-rtl chosen-rtl chosen-container-single-nosearch']//a[@class='chosen-single' and @tabindex='-1']//span[contains(text(), 'סכום')]")); // Click on sum
         clickElement = false;
         try {
-            clickElement(By.id("ember776_chosen")); // Click on sum
+            clickElement(By.xpath("//div[@class='chosen-container chosen-container-single form-control dib search-chosen ember-view ember-chosenselect form-control chosen-rtl chosen-rtl chosen-container-single-nosearch']//a[@class='chosen-single' and @tabindex='-1']//span[contains(text(), 'סכום')]")); // Click on sum
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
@@ -107,10 +108,11 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //clickElement(By.id("ember791_chosen")); // Click on region
+        // Click on region
+        // clickElement(By.xpath("//div[@class='chosen-container chosen-container-single form-control dib search-chosen ember-view ember-chosenselect form-control chosen-rtl chosen-rtl chosen-container-single-nosearch']//a[@class='chosen-single' and @tabindex='-1']//span[contains(text(), 'אזור')]")); // Click on region
         clickElement = false;
         try {
-            clickElement(By.id("ember791_chosen")); // Click on region
+            clickElement(By.xpath("//div[@class='chosen-container chosen-container-single form-control dib search-chosen ember-view ember-chosenselect form-control chosen-rtl chosen-rtl chosen-container-single-nosearch']//a[@class='chosen-single' and @tabindex='-1']//span[contains(text(), 'אזור')]")); // Click on region
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
@@ -145,10 +147,11 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
             }
         }
 
-        //clickElement(By.id("ember801_chosen")); // Click on category
+        // Click on category
+        // clickElement(By.xpath("//div[@class='chosen-container chosen-container-single form-control dib search-chosen ember-view ember-chosenselect form-control chosen-rtl chosen-rtl']//a[@class='chosen-single' and @tabindex='-1']//span[contains(text(), 'קטגוריה')]")); // Click on category
         clickElement = false;
         try {
-            clickElement(By.id("ember801_chosen")); // Click on category
+            clickElement(By.xpath("//div[@class='chosen-container chosen-container-single form-control dib search-chosen ember-view ember-chosenselect form-control chosen-rtl chosen-rtl']//a[@class='chosen-single' and @tabindex='-1']//span[contains(text(), 'קטגוריה')]")); // Click on category
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());

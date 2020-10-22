@@ -15,7 +15,7 @@ public class Login extends BasePage {
         // Login to BuyMe with existing user
         Thread.sleep(2000); // Adding sleep thread for human eye comfortability
         waitelementToBeClickable(By.xpath("//li[@class='solid' and @data-ember-action='735']")); // Wait until כניסה | השרמה is clickable
-        clickElement(By.xpath("//li[@class='solid' and @data-ember-action='735']")); // Click on כניסה | השרמה
+        clickElement(By.xpath("//span[@class='seperator-link']")); // Click on כניסה
         sendKeysToElement(By.xpath("//input[@placeholder='מייל']"), Constants.MY_EMAIL); // Send email
         sendKeysToElement(By.xpath("//input[@placeholder='סיסמה']"), Constants.MY_PASSWORD);  // Send password
         clickElement(By.xpath("//button[@type='submit' and @class='ui-btn orange large']")); // Click on BUYME-כניסה ל

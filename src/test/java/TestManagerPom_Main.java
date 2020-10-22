@@ -21,13 +21,13 @@ public class TestManagerPom_Main {
 
     @Test
     public void test01_registration() throws Exception {
-//        RegistrationTest registrationTest = new RegistrationTest();
-//        registrationTest.runOnceBeforeClass();
-//        registrationTest.test01_registration();
-//        registrationTest.test02_assertRegistration();
-//        registrationTest.afterClass();
+        RegistrationTest registrationTest = new RegistrationTest();
+        registrationTest.runOnceBeforeClass();
+        registrationTest.test01_registration();
+        registrationTest.test02_assertRegistration();
+        registrationTest.afterClass();
 
-        System.out.println(DBActions.selectBrowser());
+        //System.out.println(DBActions.selectBrowser());
 //        Connection con = DriverManager.getConnection("jdbc:mysql://" + Constants.SERVER + ":" + Constants.PORT, Constants.USER_NAME, Constants.PASSWORD);
 //        String statementToExecute = "SELECT data FROM " + Constants.DATABASE_NAME + ".`config` WHERE `name`='BROWSER';";
 //        Statement stmt = con.createStatement();
