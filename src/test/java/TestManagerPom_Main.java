@@ -18,6 +18,7 @@ import java.sql.*;
  */
 
 public class TestManagerPom_Main {
+    public static int testID;
 
     @Test
     public void test01_registration() throws Exception {
@@ -27,6 +28,9 @@ public class TestManagerPom_Main {
         registrationTest.test02_assertRegistration();
         registrationTest.afterClass();
 
+        testID=1;
+        //WriteToFile.writeToFile();
+        DBActions.writeTestRunResultsToDB(testID);
     }
 
     @Test
@@ -37,6 +41,11 @@ public class TestManagerPom_Main {
         home_PickBusiness_SendReceiveInfoTest.test02_pickBusiness();
         home_PickBusiness_SendReceiveInfoTest.test03_SenderReceiverInfo();
         home_PickBusiness_SendReceiveInfoTest.afterClass();
+
+        testID=2;
+        WriteToFile.writeToFile();
+
+        DBSingleton.con.close();
     }
 
 

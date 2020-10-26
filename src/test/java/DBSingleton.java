@@ -7,7 +7,7 @@ import java.sql.*;
  */
 
 public class DBSingleton {
-    private static Connection con;
+    public static Connection con;
 
     public static Connection getDBConnectionInstance()  {
         if (con == null) {
