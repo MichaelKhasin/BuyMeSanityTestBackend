@@ -10,7 +10,8 @@ public class DBActions {
     }
 
 
-    public static String selectBrowser() throws SQLException {
+    public static String selectBrowser() throws Exception {
+        con = DBSingleton.getDBConnectionInstance();
         String statementToExecute = "SELECT data FROM " + Constants.DATABASE_NAME + ".`config` WHERE `name`='BROWSER';";
         Statement stmt = null;
         try {
@@ -18,6 +19,8 @@ public class DBActions {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
+
+
         ResultSet rs = stmt.executeQuery(statementToExecute);
         String browserName = null;
         while(rs.next()) {

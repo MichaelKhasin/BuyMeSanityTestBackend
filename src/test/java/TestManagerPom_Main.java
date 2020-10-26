@@ -27,18 +27,6 @@ public class TestManagerPom_Main {
         registrationTest.test02_assertRegistration();
         registrationTest.afterClass();
 
-        //System.out.println(DBActions.selectBrowser());
-//        Connection con = DriverManager.getConnection("jdbc:mysql://" + Constants.SERVER + ":" + Constants.PORT, Constants.USER_NAME, Constants.PASSWORD);
-//        String statementToExecute = "SELECT data FROM " + Constants.DATABASE_NAME + ".`config` WHERE `name`='BROWSER';";
-//        Statement stmt = con.createStatement();
-//        ResultSet rs = stmt.executeQuery(statementToExecute);
-//        while(rs.next()) {
-//            String browserName = rs.getString("data");
-//            System.out.println(browserName);
-//        }
-//        rs.close();
-//        con.close();
-
     }
 
     @Test
