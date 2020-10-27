@@ -11,7 +11,9 @@ import java.sql.SQLSyntaxErrorException;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Webderiver instance instantiated by Singleton design pattern.
+ * Webdriver instance instantiated by Singleton design pattern.
+ * Browser type is fetched from the DB.
+ * In case the DB is not available, Browser type taken from data.xml
  */
 
 public class DriverSingleton {

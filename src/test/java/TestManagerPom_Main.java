@@ -1,11 +1,10 @@
 import org.testng.annotations.Test;
 
-import java.sql.*;
-
 
 /**
- * BuyMe Test Sanity.
- * Software that testing site https://buyme.co.il
+ * BuyMe Test Sanity - Backend.
+ * Software that testing site https://buyme.co.il including reading/writing from/to DB
+ * Working with REST API and receiving Gift elements from there
  * Contains of 4 steps: Registration, Home (pick price, region and category),
  * pick business and finally filling sending and received info.
  * This specific class is the Main POM class, kind of "test Manager,
@@ -29,8 +28,9 @@ public class TestManagerPom_Main {
         registrationTest.afterClass();
 
         testID=1;
-        //WriteToFile.writeToFile();
-        DBActions.writeTestRunResultsToDB(testID);
+        DBActions.writeTestResultsToDB_Results_table(testID);
+        DBActions.writeTestResultsToDB_Results_Datetime_table(testID);
+
     }
 
     @Test
@@ -43,7 +43,8 @@ public class TestManagerPom_Main {
         home_PickBusiness_SendReceiveInfoTest.afterClass();
 
         testID=2;
-        WriteToFile.writeToFile();
+        DBActions.writeTestResultsToDB_Results_table(testID);
+        DBActions.writeTestResultsToDB_Results_Datetime_table(testID);
 
         DBSingleton.con.close();
     }
