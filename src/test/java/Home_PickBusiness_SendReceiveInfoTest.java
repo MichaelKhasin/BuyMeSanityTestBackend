@@ -10,10 +10,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 /**
- * This class contains Home (pick price, region and category),
+ * This class contains Home (pick price, region and category) from REST API
  * pick business and filling sender and receiver info.
  * Most stable locators are identified by Selenium.
- * Elements assertion is took place.
  * Class extends BasePage, which contains a bunch of popular methods, so they are reused.
  */
 
@@ -64,6 +63,7 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
 
         Login.loginWithExistingUser();
+        RestApiTest.get_values(); // Call function to get indexes values from REST API
     }
 
     @Test
@@ -92,7 +92,10 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         //clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='4']")); // Pick the sum 300-499
         clickElement = false;
         try {
-            clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='4']")); // Pick the sum 300-499
+            //clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='4']")); // Pick the sum 300-499
+
+            // Get index value from REST API
+            clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='" + RestApiTest.amount_index + "']")); // Pick the sum, get value from REST API
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
@@ -131,7 +134,8 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         //clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='2']")); // Pick the region merkaz
         clickElement = false;
         try {
-            clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='2']")); // Pick the region merkaz
+            // clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='2']")); // Pick the region merkaz
+            clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='" + RestApiTest.region_index + "']")); // Pick the region from REST API
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
@@ -170,7 +174,8 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
         //clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='1']")); // Pick the category מתנות עד הבית
         clickElement = false;
         try {
-            clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='1']")); // Pick the category מתנות עד הבית
+            //clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='1']")); // Pick the category מתנות עד הבית
+            clickElement(By.xpath("//li[@class='active-result' and @data-option-array-index='" + RestApiTest.category_index + "']")); // Pick the category from REST API
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
@@ -212,34 +217,59 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
     @Test
     public void test02_pickBusiness() throws Exception {
-        // Assert url https://buyme.co.il/search?budget=4&category=204&region=11
-        Assert.assertEquals(GetXmlData.getData("UrlPickBusiness"),getCurrentUrl());
+//        // Assert url https://buyme.co.il/search?budget=4&category=204&region=11
+//        //Assert.assertEquals(GetXmlData.getData("UrlPickBusiness"),getCurrentUrl());
+//
+//        waitelementToBeClickable(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Wait until מתנות וגאדג'טים is clickable
+//
+//        //clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
+//        clickElement = false;
+//        try {
+//            clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
+//            clickElement = true;
+//            String timeNow = String.valueOf(System.currentTimeMillis());
+//            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            test.log(Status.FAIL, "Element מחוץ לקופסה - מתנות וגאדג'טים is not clickable  " + e.getMessage());
+//            clickElement = false;
+//
+//        } finally {
+//            if (clickElement) {
+//                test.log(Status.PASS, "Click Element:  " + "Element מחוץ לקופסה - מתנות וגאדג'טים clicked successfully");
+//            }
+//        }
 
-        waitelementToBeClickable(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Wait until מתנות וגאדג'טים is clickable
 
-        //clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
+         waitelementToBeClickable(By.xpath("//li[@gtm='בלי יתרה-BUYME MULTI']")); // Wait until Buyme Multi is clickable
+
+        //clickElement(By.xpath("//li[@gtm='בלי יתרה-BUYME MULTI']")); // Click on Buyme Multi
         clickElement = false;
         try {
-            clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
+            clickElement(By.xpath("//li[@gtm='בלי יתרה-BUYME MULTI']")); // Click on Buyme Multi
             clickElement = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
 
         } catch (Exception e) {
             e.printStackTrace();
-            test.log(Status.FAIL, "Element מחוץ לקופסה - מתנות וגאדג'טים is not clickable  " + e.getMessage());
+            test.log(Status.FAIL, "Element Buyme Multi is not clickable  " + e.getMessage());
             clickElement = false;
 
         } finally {
             if (clickElement) {
-                test.log(Status.PASS, "Click Element:  " + "Element מחוץ לקופסה - מתנות וגאדג'טים clicked successfully");
+                test.log(Status.PASS, "Click Element:  " + "Element Buyme Multi clicked successfully");
             }
         }
+
+
 
         //sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), "400"); // Send 400 nis to price amount
         sendKeys = false;
         try {
-            sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), "400"); // Send 400 nis to price amount
+            //sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), "400"); // Send 400 nis to price amount
+            sendKeysToElement(By.xpath("//input[@placeholder='מה הסכום?']"), RestApiTest.gift_amount); // Send "gift_amount" nis to price amount from REST API
             sendKeys = true;
             String timeNow = String.valueOf(System.currentTimeMillis());
             test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
