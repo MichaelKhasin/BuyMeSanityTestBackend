@@ -217,30 +217,6 @@ public class Home_PickBusiness_SendReceiveInfoTest extends BasePage{
 
     @Test
     public void test02_pickBusiness() throws Exception {
-//        // Assert url https://buyme.co.il/search?budget=4&category=204&region=11
-//        //Assert.assertEquals(GetXmlData.getData("UrlPickBusiness"),getCurrentUrl());
-//
-//        waitelementToBeClickable(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Wait until מתנות וגאדג'טים is clickable
-//
-//        //clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
-//        clickElement = false;
-//        try {
-//            clickElement(By.xpath("//div[@class='thumbnail' and @data-lazy='background-image: url(\"https://buyme.co.il/files/siteCategoryImg1987736.jpg?1517395490521\")']")); // Click on מחוץ לקופסה - מתנות וגאדג'טים
-//            clickElement = true;
-//            String timeNow = String.valueOf(System.currentTimeMillis());
-//            test.info("ScreenShot", MediaEntityBuilder.createScreenCaptureFromPath(takeScreenShot("C:\\Users\\Misha\\Downloads\\" + timeNow)).build());
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            test.log(Status.FAIL, "Element מחוץ לקופסה - מתנות וגאדג'טים is not clickable  " + e.getMessage());
-//            clickElement = false;
-//
-//        } finally {
-//            if (clickElement) {
-//                test.log(Status.PASS, "Click Element:  " + "Element מחוץ לקופסה - מתנות וגאדג'טים clicked successfully");
-//            }
-//        }
-
 
          waitelementToBeClickable(By.xpath("//li[@gtm='בלי יתרה-BUYME MULTI']")); // Wait until Buyme Multi is clickable
 
